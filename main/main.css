@@ -113,6 +113,7 @@ form .error {
       cursor:pointer;
       outline:none  !important;
       border:none  !important;
+	  border-color:none;
       background:transparent;
       font-family: 'Montserrat', sans-serif;
       font-size:16px;
@@ -133,11 +134,10 @@ form .error {
       }
       
       button:hover{
-        background:#eee;
       }
       
       button:focus{
-        background:#007bff;
+        background:#053f5b;
         color:#fff;
         font-weight:600;
       }
