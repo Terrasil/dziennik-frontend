@@ -47,64 +47,102 @@ form .error {
 	margin-bottom: 2rem !important;
 }
 
-
-    #wrap {
-      width: 1100px;
-      margin: 0 auto;
-    }
-
-    #external-events {
-      float: left;
-      width: 150px;
-      padding: 0 10px;
-      text-align: left;
-    }
-
-    #external-events h4 {
-      font-size: 16px;
-      margin-top: 0;
-      padding-top: 1em;
-    }
-
-    .external-event {
-      /* try to mimick the look of a real event */
-      margin: 10px 0;
-      padding: 2px 4px;
-      background: #3366CC;
-      color: #fff;
-      font-size: .85em;
-      cursor: pointer;
-    }
-
-    #external-events p {
-      margin: 1.5em 0;
-      font-size: 11px;
-      color: #666;
-    }
-
-    #external-events p input {
-      margin: 0;
-      vertical-align: middle;
-    }
-
-    #calendar {
-      /* 		float: right; */
-      margin: 0 auto;
-      width: 900px;
-      background-color: #FFFFFF;
-      border-radius: 6px;
-      box-shadow: 0 1px 2px #C3C3C3;
-      -webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
-      -moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
-      box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.18);
-    }
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 
 .calendar{
-	
-      text-align: center;
-      font-size: 14px;
-      font-family: "Open Sans", sans-serif;
-      background: url(http://www.digiphotohub.com/wp-content/uploads/2015/09/bigstock-Abstract-Blurred-Background-Of-92820527.jpg);
+  display:inline-grid;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  padding:20px;
+  border-radius:5px;
 }
+  .month{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:20px;
+    margin-bottom:20px;
+    font-weight:300;
+  }
+    .year{
+      font-weight:600;
+      margin-left:10px;
+    }
+    
+    .nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+      color:#0a3d62;
+      width:40px;
+      height:40px;
+      border-radius:40px;
+      transition-duration:.2s;
+      position:relative;
+	}
+      &:hover{
+        background:#eee;
+      }
+    
+  
+  
+  .days{
+    display: grid;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns: repeat(7, 1fr);
+    color:#999;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+    span{
+      width:50px;
+      justify-self:center;
+      align-self:center;
+      text-align:center;
+    
+  }
+  
+  .dates{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+    button{
+      cursor:pointer;
+      outline:none  !important;
+      border:none  !important;
+      background:transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size:16px;
+      justify-self:center;
+      align-self:center;
+      width:50px;
+      height:50px;
+      border-radius:50px;
+      margin:2px;
+      transition-duration:.2s;
+	}
+      .today{
+        box-shadow:inset 0px 0px 0px 2px #007bff;
+      }
+      
+      button:first-child{
+        grid-column:3;
+      }
+      
+      button:hover{
+        background:#eee;
+      }
+      
+      button:focus{
+        background:#007bff;
+        color:#fff;
+        font-weight:600;
+      }
 
+.weekend{
+	color:#b44545;
+}
 //@media 450 800
